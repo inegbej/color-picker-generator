@@ -1,0 +1,59 @@
+
+<div class="container">
+
+  <div class="panel panel-default">
+    <div class="panel-heading"><h4> Color Picker Generator </h4></div>
+    <div class="panel-body">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+
+          <div class="jumbotron text-center" [style.background-color]="this.color1">
+
+              {{color1}}
+              <br><br>
+              <div class="jumbotron-content">
+
+                  <div class="container">
+                      <div class="row justify-content-md-center">
+                        <div class="col col-lg-4"></div>
+                        <div class="col col-lg-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(colorPicker)]="color1" 
+                                [cpPresetColors]="['#7B1FA2', '#039BE5', '#FF5252', '#D32F2F', '#283593']"
+                                [cpPosition]="'left'"
+                                [style.background]="color1"
+                                [cpAlphaChannel]="'always'"
+                                [cpOutputFormat]="'hex'"
+                                [value]="color1">
+                            </div>
+                        </div>                       
+                        <div class="col col-lg-4"></div>
+                      </div> 
+                  </div> 
+
+              </div>
+
+          </div>
+        
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    <div class="panel-footer">Panel Footer</div>
+  </div>
+
+</div>
+
+<div class="container">
+    <h3>Generated code here</h3>
+  
+    <pre>
+      <code class="language-css" innerHTML="    
+      background: linear-gradient( {{this.color1}} );
+      background: -webkit-linear-gradient( {{this.color1}} );
+      background: -moz-linear-gradient( {{this.color1}} );
+      background: -o-linear-gradient( {{this.color1}} );    
+      ">
+      </code>      
+    </pre>
+  
+  </div>
